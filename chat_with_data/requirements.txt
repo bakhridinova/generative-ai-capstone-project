@@ -1,0 +1,9 @@
+streamlit
+langchain
+langchain-openai
+pandas
+openai
+plotly
+python-dotenv
+matplotlib
+tabulate
