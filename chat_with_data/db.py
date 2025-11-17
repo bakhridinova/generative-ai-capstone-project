@@ -1,4 +1,3 @@
-# db.py
 import sqlite3
 import pandas as pd
 import os
@@ -65,10 +64,8 @@ def create_and_load_table(csv_path: str):
     """Create table from LLM SQL and insert all data."""
     df = pd.read_csv(csv_path)
 
-    # Get CREATE TABLE from LLM
     create_sql = get_create_table_sql(csv_path)
 
-    # Safety: block dangerous
     dangerous = ["DROP TABLE", "DROP DATABASE", "DELETE", "UPDATE", "INSERT", "ALTER"]
     if any(k in create_sql.upper() for k in dangerous):
         raise ValueError("LLM returned unsafe SQL")
@@ -92,7 +89,6 @@ def get_stats():
         cur = conn.cursor()
         cur.execute("SELECT COUNT(*) FROM user_data")
         rows = cur.fetchone()[0]
-        # Try to guess a numeric column
         cur.execute("PRAGMA table_info(user_data)")
         cols = [row[1] for row in cur.fetchall()]
         revenue = 0
