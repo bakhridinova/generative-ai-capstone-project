@@ -1,60 +1,3 @@
-# Voice to Image tool
-
-## Features
-
-- Record audio directly in the browser
-- Upload pre-recorded audio files (supports 3 formats)
-- Smart Transcription powered by OpenAI Whisper
-- Prompt Enhancement - LLM converts your description into detailed prompts
-- Image Generation - DALL-E 3 creates high-quality images
-- All operations logged to console and file
-- Safety Features: Content filtering to ensure policy compliance
-
-## Getting Started
-
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   cd voice_to_image
-   ```
-
-2. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Set up environment variables**
-   
-   Edit `.env` and replace `your_openai_api_key_here` with your actual API key:
-   ```
-   OPENAI_API_KEY=sk-your-actual-key-here
-   ```
-
-### Running the Application
-
-```bash
-streamlit run app.py
-```
-
-The application will open in your default browser at `http://localhost:8501`
-
-## Usage
-
-### Upload audio file
-
-Audio: [Garden of Eden.mp3](screenshots/upload/Garden%20of%20Eden.mp3)
-
-![Garden of Eden upload.png](screenshots/upload/Garden%20of%20Eden%20upload.png)
-
-![Garden of Eden result.png](screenshots/upload/Garden%20of%20Eden%20result.png)
-
-![Garden of Eden.png](screenshots/upload/Garden%20of%20Eden.png)
-
-#### Logs
-
-```shell 
 2026-02-04 15:12:53 | INFO     | <module>:13 | Voice to Image Tool launched
 2026-02-04 15:12:53 | INFO     | <module>:179 | File uploaded | Name: Garden of Eden.mp3 | Size: 24168
 2026-02-04 15:12:53 | INFO     | __init__:22 | Initializing AudioToImagePipeline
@@ -69,21 +12,6 @@ Audio: [Garden of Eden.mp3](screenshots/upload/Garden%20of%20Eden.mp3)
 2026-02-04 15:12:59 | INFO     | synthesize_image:118 | Requesting image from DALL-E 3
 2026-02-04 15:13:23 | INFO     | synthesize_image:129 | Image generated successfully
 2026-02-04 15:13:27 | INFO     | execute_audio_to_image_pipeline:121 | Pipeline execution completed successfully
-```
-
-### Record voice
-
-![Children on sandbox record.png](screenshots/record/Children%20on%20sandbox%20record.png)
-
-Recording: [Children on sandbox.wav](screenshots/record/Children%20on%20sandbox.wav)
-
-![Children on sandbox result.png](screenshots/record/Children%20on%20sandbox%20result.png)
-
-![Children on sandbox.png](screenshots/record/Children%20on%20sandbox.png)
-
-#### Logs
-
-```shell 
 2026-02-04 15:16:23 | INFO     | <module>:13 | Voice to Image Tool launched
 2026-02-04 15:16:23 | INFO     | <module>:73 | User selected: Record Audio
 2026-02-04 15:16:35 | INFO     | <module>:13 | Voice to Image Tool launched
@@ -102,4 +30,3 @@ Recording: [Children on sandbox.wav](screenshots/record/Children%20on%20sandbox.
 2026-02-04 15:16:47 | INFO     | synthesize_image:118 | Requesting image from DALL-E 3
 2026-02-04 15:17:09 | INFO     | synthesize_image:129 | Image generated successfully
 2026-02-04 15:17:13 | INFO     | execute_audio_to_image_pipeline:121 | Pipeline execution completed successfully
-```

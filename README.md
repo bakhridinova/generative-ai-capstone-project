@@ -31,7 +31,7 @@ Agent should be configured with safety feature stopping it from dangerous operat
 Bonus points for hosted solution like HF Spaces
 
 
-# [Capstone project 2 - voice to image]()
+# [Capstone project 2 - voice to image](https://github.com/bakhridinova/generative-ai-capstone-project/tree/master/voice_to_image)
 
 **VOICE TO IMAGE APP**
 

@@ -3,12 +3,8 @@ import openai
 import json
 import sqlite3
 import pandas as pd
-import base64
-from io import BytesIO
-import plotly.express as px
 from db import safe_execute, DB_PATH
 from dotenv import load_dotenv
-import matplotlib.pyplot as plt
 import base64
 from io import BytesIO
 
